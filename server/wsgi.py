@@ -1,7 +1,7 @@
 import os
 from settings import app
 from flask import Response
-
+from db.Schema import User, Admin
 
 def run_app():
     port = int(os.environ.get('PORT', 8080))
