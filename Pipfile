@@ -12,6 +12,7 @@ flask-migrate = "*"
 alembic = "*"
 flask-script = "*"
 psycopg2 = "*"
+jwt = "*"
 
 [dev-packages]
 
