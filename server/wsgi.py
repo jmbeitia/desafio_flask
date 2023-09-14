@@ -1,7 +1,8 @@
 import os
 from settings import app
 from flask import Response
-from db.Schema import User, Admin
+from server import server_blueprint
+
 
 def run_app():
     port = int(os.environ.get('PORT', 8080))
@@ -10,10 +11,12 @@ def run_app():
     os.system(cmd)
 
 
+app.register_blueprint(server_blueprint, url_prefix="/api")
+
+
 @app.route('/', defaults={'u_path': ''})
 @app.route('/<path:u_path>')
 def catch_all(u_path):
-
     return Response("Sitio en proceso de construcción 🚧🏗️👷🏼‍♂️", status=200)
 
 

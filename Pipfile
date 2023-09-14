@@ -13,6 +13,8 @@ alembic = "*"
 flask-script = "*"
 psycopg2 = "*"
 jwt = "*"
+bcrypt = "*"
+flask-bcrypt = "*"
 
 [dev-packages]
 
